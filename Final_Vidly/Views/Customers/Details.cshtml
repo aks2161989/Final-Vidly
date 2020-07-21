@@ -1,8 +1,17 @@
-﻿@model Final_Vidly.Models.Customer
+﻿@using System.Globalization
+@model Final_Vidly.Models.Customer
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 <h2>@Model.Name</h2>
+<ul>
+    <li>Membership Type: @Model.MembershipType.Name</li>
+    @{ 
+        if(Model.DateOfBirth.HasValue)
+        {
+            <li> Birthdate: @Model.DateOfBirth.Value.ToString("M/d/yyyy", CultureInfo.InvariantCulture)</li>
+        }
+    }
+</ul>
 
