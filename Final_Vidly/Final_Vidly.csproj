@@ -211,9 +211,38 @@
     <Compile Include="Migrations\202007211820341_MembershipTypeNameNotNull.Designer.cs">
       <DependentUpon>202007211820341_MembershipTypeNameNotNull.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007221831493_AddAdditionalPropertiesToMovie.cs" />
+    <Compile Include="Migrations\202007221831493_AddAdditionalPropertiesToMovie.Designer.cs">
+      <DependentUpon>202007221831493_AddAdditionalPropertiesToMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007250944225_CreateGenresTable.cs" />
+    <Compile Include="Migrations\202007250944225_CreateGenresTable.Designer.cs">
+      <DependentUpon>202007250944225_CreateGenresTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007251152469_PopulateGenresTable.cs" />
+    <Compile Include="Migrations\202007251152469_PopulateGenresTable.Designer.cs">
+      <DependentUpon>202007251152469_PopulateGenresTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007251415525_AddThrillerToGenresTable.cs" />
+    <Compile Include="Migrations\202007251415525_AddThrillerToGenresTable.Designer.cs">
+      <DependentUpon>202007251415525_AddThrillerToGenresTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007251432490_SetMaxNameLengthOfGenre.cs" />
+    <Compile Include="Migrations\202007251432490_SetMaxNameLengthOfGenre.Designer.cs">
+      <DependentUpon>202007251432490_SetMaxNameLengthOfGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007251446533_SetMaxNameLengthOfMovies.cs" />
+    <Compile Include="Migrations\202007251446533_SetMaxNameLengthOfMovies.Designer.cs">
+      <DependentUpon>202007251446533_SetMaxNameLengthOfMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202007251452353_MovieNameIsRequired.cs" />
+    <Compile Include="Migrations\202007251452353_MovieNameIsRequired.Designer.cs">
+      <DependentUpon>202007251452353_MovieNameIsRequired.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -284,6 +313,7 @@
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Movies\Random.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -328,6 +358,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007211820341_MembershipTypeNameNotNull.resx">
       <DependentUpon>202007211820341_MembershipTypeNameNotNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007221831493_AddAdditionalPropertiesToMovie.resx">
+      <DependentUpon>202007221831493_AddAdditionalPropertiesToMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007250944225_CreateGenresTable.resx">
+      <DependentUpon>202007250944225_CreateGenresTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007251152469_PopulateGenresTable.resx">
+      <DependentUpon>202007251152469_PopulateGenresTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007251415525_AddThrillerToGenresTable.resx">
+      <DependentUpon>202007251415525_AddThrillerToGenresTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007251432490_SetMaxNameLengthOfGenre.resx">
+      <DependentUpon>202007251432490_SetMaxNameLengthOfGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007251446533_SetMaxNameLengthOfMovies.resx">
+      <DependentUpon>202007251446533_SetMaxNameLengthOfMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007251452353_MovieNameIsRequired.resx">
+      <DependentUpon>202007251452353_MovieNameIsRequired.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
