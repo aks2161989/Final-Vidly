@@ -239,6 +239,10 @@
     <Compile Include="Migrations\202007251452353_MovieNameIsRequired.Designer.cs">
       <DependentUpon>202007251452353_MovieNameIsRequired.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202008081211049_OverrideLabelsOfMovieProperties.cs" />
+    <Compile Include="Migrations\202008081211049_OverrideLabelsOfMovieProperties.Designer.cs">
+      <DependentUpon>202008081211049_OverrideLabelsOfMovieProperties.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -383,6 +387,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007251452353_MovieNameIsRequired.resx">
       <DependentUpon>202007251452353_MovieNameIsRequired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008081211049_OverrideLabelsOfMovieProperties.resx">
+      <DependentUpon>202008081211049_OverrideLabelsOfMovieProperties.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
