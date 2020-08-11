@@ -26,6 +26,7 @@ namespace Final_Vidly.Controllers
             var genres = _context.Genres;
             var viewModel = new NewMovieViewModel
             {
+                Movie = new Movie(),
                 Genres = genres,
             };
             return View("MovieForm", viewModel);
@@ -83,8 +84,18 @@ namespace Final_Vidly.Controllers
             return View(viewModel);
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Movie movie)
         {
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new NewMovieViewModel
+                {
+                    Movie = movie,
+                    Genres = _context.Genres.ToList()
+                };
+                return View("MovieForm", viewModel);
+            }
             if (movie.Id == 0)
             {
                 movie.DateAdded = DateTime.Now;
