@@ -26,7 +26,6 @@ namespace Final_Vidly.Controllers
             var genres = _context.Genres;
             var viewModel = new NewMovieViewModel
             {
-                Movie = new Movie(),
                 Genres = genres,
             };
             return View("MovieForm", viewModel);
@@ -52,9 +51,8 @@ namespace Final_Vidly.Controllers
             {
                 return HttpNotFound();
             }
-            var viewModel = new NewMovieViewModel
+            var viewModel = new NewMovieViewModel(movie)
             {
-                Movie = movie,
                 Genres = _context.Genres.ToList(),
             };
             return View("MovieForm", viewModel);
@@ -89,9 +87,8 @@ namespace Final_Vidly.Controllers
         {
             if (!ModelState.IsValid)
             {
-                var viewModel = new NewMovieViewModel
+                var viewModel = new NewMovieViewModel(movie)
                 {
-                    Movie = movie,
                     Genres = _context.Genres.ToList()
                 };
                 return View("MovieForm", viewModel);
