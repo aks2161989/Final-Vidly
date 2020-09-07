@@ -39,10 +39,9 @@ namespace Final_Vidly.Controllers
             new Movie{Id = 2, Name = "Wall-e"}
         };
         }
-        public ActionResult Index()
+        public ViewResult Index()
         {
-            var movies = _context.Movies.Include(m => m.Genre).ToList();
-            return View(movies);
+            return View();
         }
         public ActionResult Edit(int id)
         {

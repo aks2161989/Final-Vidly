@@ -2,6 +2,7 @@
 using Final_Vidly.Dtos;
 using Final_Vidly.Models;
 using System;
+using System.Data.Entity;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -20,10 +21,14 @@ namespace Final_Vidly.Controllers.Api
 
         // GET /api/movies
         [HttpGet]
-        public IEnumerable<MovieDto> GetMovies()
+        public IHttpActionResult GetMovies()
         {
-            var movies = _context.Movies.ToList().Select(Mapper.Map<Movie, MovieDto>);
-            return movies;
+            var movieDtos = _context
+                .Movies
+                .Include(m => m.Genre)
+                .ToList()
+                .Select(Mapper.Map<Movie, MovieDto>);
+            return Ok(movieDtos);
         }
 
         // GET /api/movies/1
