@@ -21,6 +21,7 @@ namespace Final_Vidly.Controllers
         {
             _context.Dispose();
         }
+        [Authorize(Roles =RoleName.CanManageMovies)]
         public ActionResult New()
         {
             var genres = _context.Genres;
@@ -41,8 +42,11 @@ namespace Final_Vidly.Controllers
         }
         public ViewResult Index()
         {
-            return View();
+            if(User.IsInRole(RoleName.CanManageMovies))
+                return View("List");
+            return View("ReadOnlyList");
         }
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Edit(int id)
         {
             var movie = _context.Movies.SingleOrDefault(m => m.Id == id);
